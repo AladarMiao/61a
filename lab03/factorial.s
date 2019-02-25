@@ -43,3 +43,14 @@ main_exit:
 
 factorial:
 	# YOUR CODE HERE
+	add t0, a0, x0 #t0 now has value of 3 or whatever number we want to factorial
+    addi t1, x0, 1 #t1=1
+    
+    bne t0, t1, hehe #when t1!=t0, keep doing factorial
+    zz:
+    	jr ra
+    hehe:
+    	addi t0, t0, -1 #decrement t0 by 1
+        mul a0, a0, t0 #3*2
+        beq t0, t1, zz
+    	jal x0, hehe    
