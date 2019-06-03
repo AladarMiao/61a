@@ -1,0 +1,18 @@
+#include "../../../cgen-lib/print.h"
+
+
+int main () {
+  PrintBool (!(0 >= 0));
+  PrintBool (0 >= 2);
+  PrintBool (2 >= 1);
+  PrintBool (!(3 >= 3));
+  PrintBool (!('d' >= 'd'));
+  PrintBool ('c' >= 'd');
+  PrintBool (!('d' >= '\0'));
+  PrintBool (!('\0' >= '\0'));
+  PrintBool (!("str" >= "str"));
+  char *c = "str" + 1;
+  PrintBool (!(c >= "str"));
+  PrintBool ("str" >= c);
+  return 0;
+}

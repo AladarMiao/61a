@@ -1,0 +1,11 @@
+int f (int x) {
+  return x+21;
+}
+
+int b (int x){
+	return x/20;
+}
+int main () {
+  return f (b(60));
+	
+}
