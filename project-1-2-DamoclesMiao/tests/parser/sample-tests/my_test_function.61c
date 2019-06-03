@@ -1,0 +1,5 @@
+int nivek(int aladar){
+	int x = 3;
+	x=x+aladar;
+	return x;
+}

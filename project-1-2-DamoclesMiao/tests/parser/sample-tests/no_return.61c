@@ -1,0 +1,4 @@
+char hue(int x){
+	x+=4;
+	printf('x');
+}
